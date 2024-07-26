@@ -1,0 +1,6 @@
+<web-app>
+    <display-name>E-commerce</display-name>
+    <welcome-file-list>
+        <welcome-file>index1.html</welcome-file>
+    </welcome-file-list>
+</web-app>

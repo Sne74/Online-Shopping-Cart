@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h2>Your Shopping Cart</h2>
+    <table border="1">
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <%
+            List<Item> cart = (List<Item>) session.getAttribute("cart");
+            if (cart != null) {
+                for (Item item : cart) {
+                    out.println("<tr>");
+                    out.println("<td>" + item.getName() + "</td>");
+                    out.println("<td>" + item.getQuantity() + "</td>");
+                    out.println("<td>" + item.getPrice() + "</td>");
+                    out.println("</tr>");
+                }
+            } else {
+                out.println("<tr><td colspan='3'>Your cart is empty.</td></tr>");
+            }
+        %>
+    </table>
+    <form action="checkout.jsp" method="post">
+        <input type="submit" value="Checkout">
+    </form>
+</body>
+</html>

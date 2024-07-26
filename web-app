@@ -1,0 +1,10 @@
+<web-app>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.example.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+</web-app>
